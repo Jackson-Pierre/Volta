@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Velluto Cachos | Cuidado profissional para cabelos cacheados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;700&family=Caveat:wght@600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --esp: #2B1710;
+            --cacau: #5A3420;
+            --cara: #B87333;
+            --mel: #E3A857;
+            --latte: #EFE0D2;
+            --rosa: #D9A39A;
+            --oliva: #7A8B5C;
+            --tx: #2B1710
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: 'DM Sans', system-ui, sans-serif;
+            background: var(--latte);
+            color: var(--tx);
+            line-height: 1.6;
+            font-size: 17px
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Fraunces', Georgia, serif;
+            line-height: 1.1;
+            font-weight: 700
+        }
+
+        img {
+            max-width: 100%;
+            display: block
+        }
+
+        a {
+            color: inherit
+        }
+
+        .wrap {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 22px
+        }
+
+        .btn {
+            display: inline-block;
+            border: 0;
+            cursor: pointer;
+            font: 700 1rem 'DM Sans', sans-serif;
+            padding: 15px 28px;
+            border-radius: 999px;
+            background: var(--mel);
+            color: var(--esp);
+            text-decoration: none;
+            transition: transform .2s, background .2s
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background: #f0b867
+        }
+
+        .btn.dark {
+            background: var(--cacau);
+            color: #fff
+        }
+
+        .btn.dark:hover {
+            background: var(--esp)
+        }
+
+        .btn.ghost {
+            background: transparent;
+            border: 2px solid currentColor;
+            color: inherit
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--mel);
+            outline-offset: 3px
+        }
+
+        .ph {
+            background: linear-gradient(135deg, var(--cara), var(--cacau));
+            overflow: hidden;
+            position: relative
+        }
+
+        .ph img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            inset: 0
+        }
+
+        #main {
+            display: none
+        }
+
+        body.in #shop {
+            display: none
+        }
+
+        body.in #main {
+            display: block
+        }
+
+        /* LOJA */
+        .promo {
+            background: var(--esp);
+            color: var(--mel);
+            text-align: center;
+            font-size: .9rem;
+            padding: 9px 12px;
+            font-weight: 500
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(239, 224, 210, .94);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #d6bfa8
+        }
+
+        nav .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 68px;
+            gap: 14px
+        }
+
+        .logo {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: 1.45rem;
+            color: var(--cacau);
+            text-decoration: none
+        }
+
+        .logo span {
+            color: var(--cara);
+            font-style: italic
+        }
+
+        nav ul {
+            display: flex;
+            gap: 26px;
+            list-style: none;
+            padding: 0;
+            font-weight: 500
+        }
+
+        nav ul a {
+            text-decoration: none
+        }
+
+        nav ul a:hover {
+            color: var(--cara)
+        }
+
+        .hero {
+            background: var(--cacau);
+            color: #fff;
+            position: relative;
+            overflow: hidden
+        }
+
+        .hero .wrap {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 40px;
+            align-items: center;
+            padding-top: 70px;
+            padding-bottom: 70px
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 5.5vw, 4.4rem)
+        }
+
+        .hero p {
+            margin: 20px 0 30px;
+            max-width: 46ch;
+            color: #ecd9c7
+        }
+
+        .hero .ph {
+            aspect-ratio: 4/5;
+            border-radius: 220px 220px 24px 24px;
+            box-shadow: 14px 14px 0 var(--mel)
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--mel);
+            color: var(--esp);
+            font-weight: 700;
+            font-size: .85rem;
+            padding: 5px 14px;
+            border-radius: 999px;
+            margin-bottom: 18px
+        }
+
+        .faixa {
+            background: var(--mel);
+            color: var(--esp);
+            padding: 16px 0;
+            font-weight: 700
+        }
+
+        .faixa .wrap {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px 30px
+        }
+
+        section.s {
+            padding: 84px 0
+        }
+
+        .s h2 {
+            font-size: clamp(1.9rem, 4vw, 2.9rem);
+            margin-bottom: 12px
+        }
+
+        .s .sub {
+            max-width: 56ch;
+            opacity: .85;
+            margin-bottom: 40px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 24px
+        }
+
+        .card {
+            background: #fff8f1;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #dcc4ad
+        }
+
+        .card .ph {
+            aspect-ratio: 1
+        }
+
+        .card .b {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1
+        }
+
+        .card h3 {
+            font-size: 1.25rem
+        }
+
+        .card .pr {
+            font-weight: 700;
+            color: var(--cara);
+            font-size: 1.15rem;
+            margin-top: auto
+        }
+
+        .card .btn {
+            padding: 11px 18px;
+            font-size: .92rem;
+            text-align: center
+        }
+
+        .sel {
+            font-size: .78rem;
+            font-weight: 700;
+            color: var(--oliva)
+        }
+
+        .curadoria {
+            background: var(--esp);
+            color: #fff
+        }
+
+        .curadoria .card {
+            background: #3b2218;
+            border-color: #5A3420
+        }
+
+        .curadoria .card .pr {
+            color: var(--mel)
+        }
+
+        .etapas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 22px;
+            counter-reset: e
+        }
+
+        .etapas div {
+            padding: 26px;
+            border-radius: 20px;
+            background: var(--rosa);
+            color: var(--esp)
+        }
+
+        .etapas div:nth-child(2) {
+            background: var(--mel)
+        }
+
+        .etapas div:nth-child(3) {
+            background: var(--oliva);
+            color: #fff
+        }
+
+        .etapas div:nth-child(4) {
+            background: var(--cara);
+            color: #fff
+        }
+
+        .etapas b {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            display: block;
+            margin-bottom: 6px
+        }
+
+        .dep {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 22px
+        }
+
+        .dep blockquote {
+            background: #fff8f1;
+            padding: 26px;
+            border-radius: 20px;
+            border-left: 6px solid var(--cara)
+        }
+
+        .dep cite {
+            display: block;
+            margin-top: 12px;
+            font-weight: 700;
+            font-style: normal;
+            color: var(--cacau)
+        }
+
+        .news {
+            background: var(--cara);
+            color: #fff;
+            text-align: center
+        }
+
+        footer {
+            background: var(--esp);
+            color: #c9b09a;
+            padding: 40px 0;
+            font-size: .9rem;
+            text-align: center
+        }
+
+        /* PEDIDO */
+        #loading {
+            position: fixed;
+            inset: 0;
+            background: var(--esp);
+            color: var(--mel);
+            z-index: 100;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px
+        }
+
+        #loading.on {
+            display: flex
+        }
+
+        #loading h2 {
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            color: #fff;
+            margin-bottom: 10px
+        }
+
+        .bar {
+            width: min(320px, 80vw);
+            height: 8px;
+            background: #5A3420;
+            border-radius: 9px;
+            margin-top: 26px;
+            overflow: hidden
+        }
+
+        .bar i {
+            display: block;
+            height: 100%;
+            width: 0;
+            background: var(--mel);
+            transition: width 3.2s ease
+        }
+
+        /* PÁGINA SECRETA */
+        #main {
+            background: var(--esp);
+            color: #f6e9dc
+        }
+
+        .m-hero {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            padding: 60px 22px;
+            background: radial-gradient(circle at 50% 30%, #5A3420 0, var(--esp) 70%)
+        }
+
+        .m-hero h1 {
+            font-size: clamp(2.6rem, 8vw, 6rem);
+            color: #fff
+        }
+
+        .m-hero h1 em {
+            color: var(--mel)
+        }
+
+        .m-hero p {
+            max-width: 48ch;
+            margin: 22px auto 34px;
+            font-size: 1.15rem
+        }
+
+        .script {
+            font-family: 'Caveat', cursive;
+            font-size: 1.8rem;
+            color: var(--mel)
+        }
+
+        .m-s {
+            padding: 90px 0
+        }
+
+        .m-s h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin-bottom: 34px;
+            text-align: center;
+            color: #fff
+        }
+
+        .fotos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px
+        }
+
+        .fotos figure .ph {
+            aspect-ratio: 3/4;
+            border-radius: 18px
+        }
+
+        .fotos figure:nth-child(even) {
+            margin-top: 30px
+        }
+
+        .fotos figcaption {
+            font-family: 'Caveat', cursive;
+            font-size: 1.4rem;
+            color: var(--mel);
+            margin-top: 8px;
+            text-align: center
+        }
+
+        .tl {
+            max-width: 640px;
+            margin: 0 auto;
+            border-left: 3px solid var(--cara);
+            padding-left: 28px
+        }
+
+        .tl div {
+            margin-bottom: 34px;
+            position: relative
+        }
+
+        .tl div::before {
+            content: "";
+            position: absolute;
+            left: -39px;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--mel)
+        }
+
+        .tl b {
+            color: var(--mel);
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem
+        }
+
+        .razoes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px
+        }
+
+        .razoes div {
+            background: #3b2218;
+            border-radius: 20px;
+            padding: 26px;
+            border-top: 5px solid var(--c, var(--mel))
+        }
+
+        .razoes div:nth-child(2) {
+            --c: var(--rosa)
+        }
+
+        .razoes div:nth-child(3) {
+            --c: var(--oliva)
+        }
+
+        .razoes div:nth-child(4) {
+            --c: var(--cara)
+        }
+
+        .razoes h3 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 8px
+        }
+
+        .carta {
+            background: var(--latte);
+            color: var(--esp);
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 46px 40px;
+            border-radius: 6px;
+            box-shadow: 12px 12px 0 var(--cara);
+            font-family: 'Fraunces', serif;
+            font-weight: 500;
+            font-size: 1.12rem;
+            line-height: 1.8
+        }
+
+        .carta p {
+            margin-bottom: 16px
+        }
+
+        .carta .assin {
+            font-family: 'Caveat', cursive;
+            font-size: 2rem;
+            color: var(--cacau)
+        }
+
+        .final {
+            text-align: center;
+            background: radial-gradient(circle at 50% 100%, #5A3420, var(--esp) 70%)
+        }
+
+        .final h2 {
+            font-size: clamp(2rem, 5vw, 3.6rem)
+        }
+
+        .cupom {
+            display: inline-block;
+            border: 2px dashed var(--mel);
+            color: var(--mel);
+            padding: 12px 26px;
+            border-radius: 14px;
+            font-weight: 700;
+            letter-spacing: .06em;
+            margin: 22px 0
+        }
+
+        .resp {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            min-height: 120px;
+            position: relative
+        }
+
+        #sim {
+            font-size: 1.1rem
+        }
+
+        #yay {
+            display: none;
+            margin-top: 24px;
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            color: var(--mel)
+        }
+
+        .heart {
+            position: fixed;
+            bottom: -30px;
+            pointer-events: none;
+            z-index: 50;
+            animation: up 3.5s linear forwards
+        }
+
+        @keyframes up {
+            to {
+                transform: translateY(-110vh) rotate(25deg);
+                opacity: 0
+            }
+        }
+
+        @media(max-width:780px) {
+            nav ul {
+                display: none
+            }
+
+            .hero .wrap {
+                grid-template-columns: 1fr
+            }
+
+            .hero .ph {
+                max-width: 340px;
+                margin: auto
+            }
+
+            .carta {
+                padding: 30px 22px
+            }
+
+            .fotos figure:nth-child(even) {
+                margin-top: 0
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+                scroll-behavior: auto
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= LOJA (fachada) ================= -->
+    <div id="shop">
+        <div class="promo">Semana do Cacho: frete grátis acima de R$ 149 e 15% OFF no primeiro kit</div>
+        <nav>
+            <div class="wrap">
+                <a class="logo" href="#" data-go>Velluto <span>Cachos</span></a>
+                <ul>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#cronograma">Cronograma</a></li>
+                    <li><a href="#curadoria">Marcas que indicamos</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                </ul>
+                <a class="btn dark" href="#" data-go>Carrinho (1)</a>
+            </div>
+        </nav>
+
+        <header class="hero">
+            <div class="wrap">
+                <div>
+                    <span class="tag">Kit Cacho Definido em promoção</span>
+                    <h1>Seu cacho merece ser visto, não escondido.</h1>
+                    <p>Creme de pentear, máscara e leave-in com manteiga de karité, óleo de coco e pantenol. Definição
+                        que dura o dia todo, sem pesar e sem ressecar.</p>
+                    <a class="btn" href="#" data-go>Quero meu kit com 15% OFF</a>
+                    <a class="btn ghost" href="#produtos" style="margin-left:10px">Ver produtos</a>
+                </div>
+                <div class="ph"><img alt="Mulher de cabelo cacheado"
+                        src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&q=80"
+                        onerror="this.remove()"></div>
+            </div>
+        </header>
+
+        <div class="faixa">
+            <div class="wrap"><span>Sem sulfato</span><span>Sem petrolatos</span><span>Livre de testes em
+                    animais</span><span>Compra 100% segura</span></div>
+        </div>
+
+        <section class="s" id="produtos">
+            <div class="wrap">
+                <h2>Linha Velluto</h2>
+                <p class="sub">Três passos para um cacho com forma, brilho e maciez. Funciona do ondulado ao crespo.</p>
+                <div class="grid">
+                    <article class="card">
+                        <div class="ph"><img alt="Creme de pentear"
+                                src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80"
+                                onerror="this.remove()"></div>
+                        <div class="b"><span class="sel">Mais vendido</span>
+                            <h3>Creme de Pentear Definição</h3>
+                            <p>Karité e óleo de coco para cachos definidos e sem frizz. 300 ml.</p><span class="pr">R$
+                                49,90</span><a class="btn" href="#" data-go>Comprar</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="ph"><img alt="Máscara"
+                                src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80"
+                                onerror="this.remove()"></div>
+                        <div class="b"><span class="sel">Nutrição profunda</span>
+                            <h3>Máscara Cacau Intenso</h3>
+                            <p>Manteiga de cacau e proteínas. Devolve maciez em 5 minutos. 300 g.</p><span class="pr">R$
+                                59,90</span><a class="btn" href="#" data-go>Comprar</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="ph"><img alt="Leave-in"
+                                src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&q=80"
+                                onerror="this.remove()"></div>
+                        <div class="b"><span class="sel">Novidade</span>
+                            <h3>Leave-in Mel &amp; Karité</h3>
+                            <p>Protege, hidrata e reativa o cacho no dia seguinte. 200 ml.</p><span class="pr">R$
+                                44,90</span><a class="btn" href="#" data-go>Comprar</a>
+                        </div>
+                    </article>
+                    <article class="card" style="background:var(--cacau);color:#fff">
+                        <div class="b" style="justify-content:center"><span class="sel" style="color:var(--mel)">Kit
+                                completo</span>
+                            <h3>Kit Cacho Definido</h3>
+                            <p>Os 3 produtos juntos com 15% de desconto e brinde surpresa.</p><span class="pr"
+                                style="color:var(--mel)">de R$ 154,70 por R$ 131,50</span><a class="btn" href="#"
+                                data-go>Quero o kit</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="s" id="cronograma" style="background:#e4d0bd">
+            <div class="wrap">
+                <h2>Cronograma capilar em 4 passos</h2>
+                <p class="sub">Alternando hidratação, nutrição e reconstrução, o cacho fica equilibrado o mês inteiro.
+                </p>
+                <div class="etapas">
+                    <div><b>Hidratação</b>Repõe a água dos fios. Semana 1.</div>
+                    <div><b>Nutrição</b>Devolve óleos e brilho. Semana 2.</div>
+                    <div><b>Reconstrução</b>Repara a fibra e dá força. Semana 3.</div>
+                    <div><b>Definição</b>Finaliza com creme e leave-in. Sempre.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s curadoria" id="curadoria">
+            <div class="wrap">
+                <h2>Marcas que a gente indica</h2>
+                <p class="sub" style="opacity:.8">Além da nossa linha, estes são produtos para cacheadas que a equipe
+                    Velluto usa e recomenda.</p>
+                <div class="grid">
+                    <article class="card">
+                        <div class="b"><span class="sel" style="color:var(--mel)">Salon Line</span>
+                            <h3>#todecacho Creme de Pentear</h3>
+                            <p>Clássico para definir e controlar o volume.</p><a class="btn" href="#" data-go>Ver</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="b"><span class="sel" style="color:var(--mel)">Novex</span>
+                            <h3>Meu Cacho Minha Vida</h3>
+                            <p>Linha queridinha de quem faz o cronograma.</p><a class="btn" href="#" data-go>Ver</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="b"><span class="sel" style="color:var(--mel)">Lola Cosmetics</span>
+                            <h3>Dream Cream</h3>
+                            <p>Leave-in multifuncional para finalizar os cachos.</p><a class="btn" href="#"
+                                data-go>Ver</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="b"><span class="sel" style="color:var(--mel)">Pantene</span>
+                            <h3>Hidra-Cachos</h3>
+                            <p>Opção acessível para o dia a dia da rotina.</p><a class="btn" href="#" data-go>Ver</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="s" id="depoimentos">
+            <div class="wrap">
+                <h2>Quem usa, volta</h2>
+                <p class="sub">Mais de 12 mil kits entregues.</p>
+                <div class="dep">
+                    <blockquote>Meu cacho nunca tinha ficado tão definido. O cheiro é uma delícia.<cite>Mariana
+                            S.</cite></blockquote>
+                    <blockquote>Cheguei a pensar que era impossível domar meu frizz. Era só ter o produto
+                        certo.<cite>Camila R.</cite></blockquote>
+                    <blockquote>Entrega rápida e o kit veio com um brinde. Já pedi o segundo.<cite>Beatriz L.</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section class="s news">
+            <div class="wrap">
+                <h2>Ganhe 15% OFF hoje</h2>
+                <p class="sub" style="margin:0 auto 28px;opacity:1">Finalize seu pedido e o desconto é aplicado
+                    automaticamente.</p>
+                <a class="btn dark" href="#" data-go>Finalizar pedido</a>
+            </div>
+        </section>
+        <footer>Velluto Cachos · Todos os direitos reservados · Atendimento de seg. a sex.</footer>
+    </div>
+
+    <!-- ================= TRANSIÇÃO ================= -->
+    <div id="loading" role="status">
+        <p class="script">um pedido especial</p>
+        <h2 id="lt">Separando seu pedido...</h2>
+        <div class="bar"><i id="lb"></i></div>
+    </div>
+
+    <!-- ================= PÁGINA SECRETA ================= -->
+    <div id="main">
+        <header class="m-hero">
+            <div>
+                <p class="script">Laislly,</p>
+                <h1>isso nunca foi sobre <em>cabelo</em>.</h1>
+                <p>Eu quero fazer diferente, quero voltar. E só consigo fazer isso do meu jeito: com
+                    cuidado, com capricho e sendo sincero. Rola a página?</p>
+                <a class="btn" href="#fotos">Continuar</a>
+            </div>
+        </header>
+
+        <section class="m-s" id="fotos">
+            <div class="wrap">
+                <h2>A gente tem história</h2>
+                <div class="fotos">
+                    <figure>
+                        <div class="ph"><img src="assets/img1.jpeg" alt="Foto 1" onerror="this.remove()"></div>
+                        <figcaption>um beijo inesquecível</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="ph"><img src="assets/img2.jpeg" alt="Foto 2" onerror="this.remove()"></div>
+                        <figcaption>sempre tão bela</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="ph"><img src="assets/img3.jpeg" alt="Foto 3" onerror="this.remove()"></div>
+                        <figcaption>esse dia foi perfeito</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="m-s" style="background:#34190f">
+            <div class="wrap">
+                <h2>Momentos que eu guardo</h2>
+                <div class="tl">
+                    <div>
+                        <b>O dia em que me apaixonei</b><br>Quando vi que eras uma pessoa responsável e que em ti brilhava a luz do Espírito Santo, a partir daí não consegui resistir. Não foi carência, é Amor.
+                    </div>
+                    <div>
+                        <b>A vez que você me fez esquecer até meu nome</b><br>Os teus olhos... me perco neles. Sempre que te olhava e nos encarávamos, parecia que o mundo parava, só conseguia pensar em ti e em como és linda.
+                    </div>
+                    <div>
+                        <b>O momento em que percebi</b><br>Admito que pensei que já estava tudo bem e não te tratei como merecia. Me arrependo de ter percebido isso tarde demais...
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="m-s">
+            <div class="wrap">
+                <h2>Por que você, Laislly</h2>
+                <div class="razoes">
+                    <div>
+                        <h3>Seu jeito</h3>
+                        <p>O Seu jeito de ser... tudo em você é perfeito. Os teus olhos, o teu sorriso, a tua forma de correr, Eu amo tudo em você.</p>
+                    </div>
+                    <div>
+                        <h3>Seus cachos</h3>
+                        <p>Sim, fiz um site sobre cabelos cacheados, porque os teus cachos me deixam maravilhado de tão lindos.</p>
+                    </div>
+                    <div>
+                        <h3>Como você me fazia crescer</h3>
+                        <p>Eu cresci, mudei, me tornei mais responsável por incrível que pareça, me tornei alguém
+                            melhor, graças a você.</p>
+                    </div>
+                    <div>
+                        <h3>O que eu aprendi</h3>
+                        <p>Eu errei, deveria ter notado antes, e mudado antes, em vez disso, tentei esquecer, e agora me arrependo profundamente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="m-s" style="background:#34190f">
+            <div class="wrap">
+                <h2>Uma carta, sem pressa</h2>
+                <div class="carta">
+                    <p>Laislly,</p>
+                    <p>Sei que você pode fechar essa página agora e tudo bem. Mas se você chegou até aqui, queria que
+                        soubesse que cada detalhe foi pensado em você.</p>
+                    <p>Eu sei meu erro, e admito que eu sou um bosta, não deveria ter feito oque eu fiz, e eu sei que
+                        você merece o melhor em todos os momentos, e eu quero melhorar, quero ser melhor para você, eu
+                        morreria por você, assim como cristo morreu pela igreja, mas estou disposto a viver por você,
+                        estou disposto a mudar minha rotina, meus gostos, minha alimentação, estou disposto a ser alguém
+                        melhor para você.</p>
+                    <p>Eu quero construir algo novo com você, ter uma família contigo, não estou pedindo que você
+                        esqueça. Estou pedindo uma chance de te mostrar, com atitude, quem eu
+                        sou agora.</p>
+                    <p class="assin">Jackson</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="m-s final">
+            <div class="wrap">
+                <p class="script">cupom exclusivo para você</p>
+                <h2>Um piquenique comigo?</h2>
+                <div class="cupom">VOLTA-LAISLLY · 100% OFF</div>
+                <p style="max-width:44ch;margin:0 auto 26px">Válido para um piquenique, uma conversa e uma chance. Sem
+                    pressão
+                    e sem prazo. Escolhe aí:</p>
+                <div class="resp">
+                    <button class="btn" id="sim">Aceito o piquenique</button>
+                    <button class="btn ghost" id="nao">Agora não</button>
+                </div>
+                <p id="yay">Combinado! Me chama no WhatsApp e a gente marca. 🤎<br><br><a class="btn" id="zap"
+                        href="https://wa.me/5565996016822?text=Aceito" target="_blank" rel="noopener">Chamar o
+                        Jackson</a></p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const $ = s => document.querySelector(s);
+        const msgs = ["Separando seu pedido...", "Embalando com carinho...", "Aplicando cupom exclusivo...", "Pedido especial para a Laislly"];
+        document.querySelectorAll('[data-go]').forEach(a => a.addEventListener('click', e => {
+            e.preventDefault(); $('#loading').classList.add('on');
+            requestAnimationFrame(() => { $('#lb').style.width = '100%' });
+            let i = 0; const t = setInterval(() => { i++; if (msgs[i]) $('#lt').textContent = msgs[i]; }, 900);
+            setTimeout(() => { clearInterval(t); document.body.classList.add('in'); $('#loading').classList.remove('on'); window.scrollTo(0, 0) }, 3600);
+        }));
+        // botão "Agora não" foge do mouse/dedo
+        const nao = $('#nao'); let n = 0;
+        function fugir(e) {
+            e.preventDefault(); n++;
+            const box = nao.parentElement.getBoundingClientRect();
+            nao.style.position = 'relative';
+            nao.style.left = (Math.random() * 160 - 80) + 'px';
+            nao.style.top = (Math.random() * 90 - 45) + 'px';
+            nao.textContent = ["Tem certeza?", "Pensa de novo", "Sério?", "Só um café!"][n % 4];
+            $('#sim').style.transform = 'scale(' + Math.min(1 + n * .12, 1.6) + ')';
+        }
+        nao.addEventListener('mouseenter', fugir); nao.addEventListener('click', fugir); nao.addEventListener('touchstart', fugir, { passive: false });
+        $('#sim').addEventListener('click', () => {
+            $('#yay').style.display = 'block'; $('.resp').style.display = 'none';
+            if (matchMedia('(prefers-reduced-motion:no-preference)').matches)
+                for (let i = 0; i < 40; i++) {
+                    const h = document.createElement('span'); h.className = 'heart'; h.textContent = ['🤎', '🧡', '✨'][i % 3];
+                    h.style.left = Math.random() * 100 + 'vw'; h.style.fontSize = (16 + Math.random() * 26) + 'px'; h.style.animationDelay = Math.random() * 1.5 + 's';
+                    document.body.appendChild(h); setTimeout(() => h.remove(), 5500);
+                }
+        });
+    </script>
+</body>
+
+</html>
